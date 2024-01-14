@@ -2,7 +2,7 @@ email = input("enter your email :")
 j,k,d=0,0,0
 if len(email)>=6:
     if email[0].isalpha():
-        if ("@" in email) and (email.count("@")==1):
+        if ("@" in email) and (email.count("@")==1):    # Using xor operator, if both true or both are false then answer is false.Have not used or operator, if mail has 2 .. then also condition is true
             if (email[-4]=='.') ^ (email[-3]=="."):
                 for i in email:
                     if i == i.isspace():
@@ -19,10 +19,10 @@ if len(email)>=6:
                 if k==1 or j==1 or d==1:
                     print("wrong email, condition 5 not satisfied.")
                 else:
-                    print("Email is right")         # string iteration 
+                    print("Email is right")        
             else:
-                print("wrong email, condition 4 not satisfied.")                                # Using xor operator, if both true or both are false then answer is false 
-        else:                                                                                   # have not used or operator, if mail has 2 .. then also condition is true
+                print("wrong email, condition 4 not satisfied.")                                 
+        else:                                                                                   
             print("wrong email, condition 3 not satisfied.")
     else:
         print ("wrong email, condition 2 not satisfied.")
